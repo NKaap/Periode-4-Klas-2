@@ -7,8 +7,10 @@ using TMPro;
 public class Locomotion : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject ovrRig;
+    public OVRPlayerController ovrRig;
     public TextMeshProUGUI textMesh;
+    public bool RotationBool = true;
+    public bool LocomotionBool = true;
     void Start()
     {
         
@@ -20,7 +22,7 @@ public class Locomotion : MonoBehaviour
         
     }
 
-    public void ChangeLocomotion(bool LocomotionBool = true)
+    public void ChangeLocomotion()
     {
         if (LocomotionBool == true)
         {
@@ -36,17 +38,17 @@ public class Locomotion : MonoBehaviour
         }
     }
 
-    public void ChangeRotation(bool RotationBool = true)
+    public void ChangeRotation()
     {
         if (RotationBool == true)
         {
-            ovrRig.GetComponent<OVRPlayerController>().SnapRotation = false;
+            ovrRig.SnapRotation = false;
             textMesh.text = "SMOOTH TURNING";
             RotationBool = false;
         }
         else if (RotationBool == false)
         {
-            ovrRig.GetComponent<OVRPlayerController>().SnapRotation = true;
+            ovrRig.SnapRotation = true;
             textMesh.text = "SNAP TURNING";
             RotationBool = true;
         }
