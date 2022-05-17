@@ -7,6 +7,7 @@ public class ObjectSelector : MonoBehaviour
     public GameObject[] objects;
     public Transform spawnpoint;
     public int counter;
+    public bool canSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +44,11 @@ public class ObjectSelector : MonoBehaviour
 
     public void RandomObjectSpawner()
     {
-        GameObject spawn = objects[Random.Range(0, objects.Length)];
-        Instantiate(spawn, spawnpoint.position, Quaternion.identity, transform);
-       
+        if (canSpawn == false)
+        {
+            GameObject spawn = objects[Random.Range(0, objects.Length)];
+            Instantiate(spawn, spawnpoint.position, Quaternion.identity, transform);
+            canSpawn = true;
+        }
     }
 }
