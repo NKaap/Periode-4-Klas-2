@@ -7,7 +7,7 @@ using UnityEngine;
 	public Texture2D BrushTexture;
 
 	private Camera _cam;
-	private Texture2D _texture;
+	public Texture2D _texture;
 	private Texture2D _originalTexture;
 	private Texture2D _transitTexture;
 	private TextureManager _brushTextureManager;
