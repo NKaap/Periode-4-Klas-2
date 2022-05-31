@@ -7,7 +7,9 @@ public class BlenderDraaiding : MonoBehaviour
     public GameObject Button;
 
     [Header("BlenderSetting")]
+    public bool blenderOnBase;
     public bool blenderIsOn;
+    public RaycastHit hit;
     public Animator blenderAnim;
     public AudioSource blenderSound;
 
@@ -24,20 +26,40 @@ public class BlenderDraaiding : MonoBehaviour
         {
             ToggleBlender();
         }
+        if(blenderIsOn == false)
+        {
+            blenderIsOn = false;
+            blenderAnim.Play("StopBlender");
+            blenderSound.Stop();
+        }
+        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, out hit, 0.75f))
+        {
+            if (hit.collider.CompareTag("BlenderBase"))
+            {
+                blenderOnBase = true;
+            }
+            else
+            {
+                blenderOnBase = false;
+            }
+        }
     }
 
     public void ToggleBlender()
     {
-        blenderIsOn = !blenderIsOn;
-        if (blenderIsOn == false)
+        if(blenderOnBase == true)
         {
-            blenderAnim.Play("StopBlender");
-            blenderSound.Stop();
-        }
-        if (blenderIsOn == true)
-        {
-            blenderAnim.Play("BlenderOn");
-            blenderSound.Play();
+            blenderIsOn = !blenderIsOn;
+            if (blenderIsOn == false)
+            {
+                blenderAnim.Play("StopBlender");
+                blenderSound.Stop();
+            }
+            if (blenderIsOn == true)
+            {
+                blenderAnim.Play("BlenderOn");
+                blenderSound.Play();
+            }
         }
     }
 }
