@@ -5,6 +5,7 @@ using UnityEngine;
 public class BlenderDraaiding : MonoBehaviour
 {
     public GameObject Button;
+    public GameObject blender;
 
     [Header("BlenderSetting")]
     public bool blenderOnBase;
@@ -32,16 +33,16 @@ public class BlenderDraaiding : MonoBehaviour
             blenderAnim.Play("StopBlender");
             blenderSound.Stop();
         }
-        if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, out hit, 0.75f))
+
+
+        float distance = Mathf.Abs(transform.position.y - blender.transform.position.y);
+
+        if(distance < 0.75f)
         {
-            if (hit.collider.CompareTag("BlenderBase"))
-            {
-                blenderOnBase = true;
-            }
-            else
-            {
-                blenderOnBase = false;
-            }
+            blenderOnBase = true;
+        } else
+        {
+            blenderOnBase = false;
         }
     }
 
