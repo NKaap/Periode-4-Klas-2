@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public LeaderBoard leaderboard;
 
     public TMP_InputField playerNameInputField;
+    public TMP_InputField scoreInputField;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,11 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("Could not set playername" + response.Error);
             }
         });
+    }
+    public void SetPlayerScore()
+    {
+
+        this.gameObject.GetComponent<PlayerController2>().score = int.Parse(scoreInputField.text);
     }
 
     IEnumerator SetupRoutine()
