@@ -24,7 +24,7 @@ using UnityEngine;
 		public TextureManager(Texture2D baseTexture)
 		{
 			this._baseTexture = baseTexture;
-			this.Scale = 0.5f;
+			this.Scale = 0.1f;
 		}
 
 		public Color GetPixel(int x, int y)

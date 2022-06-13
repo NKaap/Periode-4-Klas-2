@@ -42,7 +42,7 @@ public class PaintManager : Singleton<PaintManager>{
         command.SetRenderTarget(extend);
         command.SetRenderTarget(support);
 
-        paintMaterial.SetFloat(prepareUVID, 1);
+        paintMaterial.SetFloat(prepareUVID, 0);
         command.SetRenderTarget(uvIslands);
         command.DrawRenderer(rend, paintMaterial, 0);
 

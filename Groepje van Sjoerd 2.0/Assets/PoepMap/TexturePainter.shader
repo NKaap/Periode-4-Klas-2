@@ -1,4 +1,4 @@
-﻿Shader "TNTC/TexturePainter"{   
+﻿Shader "TexturePainter"{   
 
     Properties{
         _PainterColor ("Painter Color", Color) = (0, 0, 0, 0)
