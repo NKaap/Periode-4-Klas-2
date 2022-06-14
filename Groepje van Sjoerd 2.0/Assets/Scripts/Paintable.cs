@@ -3,7 +3,7 @@ using UnityEngine;
 public class Paintable : MonoBehaviour {
     const int TEXTURE_SIZE = 1024;
 
-    public float extendsIslandOffset = 0;
+    public float extendsIslandOffset = 1;
 
     RenderTexture extendIslandsRenderTexture;
     RenderTexture uvIslandsRenderTexture;
