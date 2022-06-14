@@ -27,11 +27,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 140551639040
-    m_Localized: Settings
+    m_Localized: SETTINGS
     m_Metadata:
       m_Items: []
   - m_Id: 214782431232
-    m_Localized: Quit
+    m_Localized: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2381506496942080
+    m_Localized: BACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2382281402994688
+    m_Localized: BRIGHTNESS
     m_Metadata:
       m_Items: []
   references:
