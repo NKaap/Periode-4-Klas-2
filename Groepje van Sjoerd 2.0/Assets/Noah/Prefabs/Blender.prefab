@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3974244935810133846}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &149964944235677373
 GameObject:
@@ -242,7 +242,7 @@ Transform:
   - {fileID: 7867272599645624940}
   - {fileID: 8646553744850551141}
   m_Father: {fileID: 3974244935810133846}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &116451361515350946
 MonoBehaviour:
@@ -325,7 +325,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 9113210875866302596}
   m_Father: {fileID: 3974244935810133846}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -389,7 +390,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: bcd3abed3ce082f4cad037cc41e77dc3, type: 3}
 --- !u!1 &4354006787992319468
@@ -420,7 +421,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 240656863784776755}
-  - {fileID: 9113210875866302596}
   - {fileID: 9062658644019444651}
   - {fileID: 6471021264816090488}
   m_Father: {fileID: 0}
@@ -437,6 +437,9 @@ GameObject:
   - component: {fileID: 9113210875866302596}
   - component: {fileID: 1831746734423189357}
   - component: {fileID: 5060014729844764528}
+  - component: {fileID: 1170427430}
+  - component: {fileID: 1170427429}
+  - component: {fileID: 1170427434}
   m_Layer: 0
   m_Name: Knop
   m_TagString: Untagged
@@ -451,12 +454,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4927352541696756056}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000000055879354, y: 0.3298388, z: 0.22437519}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.339, z: 0.228}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3974244935810133846}
-  m_RootOrder: 1
+  m_Father: {fileID: 240656863784776755}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1831746734423189357
 MeshFilter:
@@ -507,6 +510,80 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1170427430
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927352541696756056}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1170427429
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927352541696756056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15544945, y: 0.14323753, z: 0.11137408}
+  m_Center: {x: -0.0018106103, y: -0.0007172525, z: 0.0120602995}
+--- !u!114 &1170427434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927352541696756056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd37750386ddb5843bfa8fa581c7c7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 4927352541696756056}
+  onPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1170427434}
+        m_TargetAssemblyTypeName: ButtonVR, Assembly-CSharp
+        m_MethodName: JeMama
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1170427434}
+        m_TargetAssemblyTypeName: ButtonVR, Assembly-CSharp
+        m_MethodName: JeMama2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  presser: {fileID: 0}
+  blenderMes: {fileID: 5083066554609478030}
 --- !u!1 &5083066554609478030
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 4927352541696756056}
-  blender: {fileID: 0}
+  blender: {fileID: 4260827765074623193}
   blenderOnBase: 0
   blenderIsOn: 0
   blenderAnim: {fileID: 8591186664367215568}
@@ -823,15 +900,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdca6e931d0b3b14fad23d35f039fad9, type: 3}
---- !u!23 &1856571228237234059 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2565678621332437034, guid: fdca6e931d0b3b14fad23d35f039fad9,
-    type: 3}
-  m_PrefabInstance: {fileID: 4204324308473808801}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &687064400662988004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3733540992902136645, guid: fdca6e931d0b3b14fad23d35f039fad9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4204324308473808801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1856571228237234059 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2565678621332437034, guid: fdca6e931d0b3b14fad23d35f039fad9,
     type: 3}
   m_PrefabInstance: {fileID: 4204324308473808801}
   m_PrefabAsset: {fileID: 0}
