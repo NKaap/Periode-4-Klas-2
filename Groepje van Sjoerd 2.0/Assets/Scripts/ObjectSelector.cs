@@ -28,7 +28,7 @@ public class ObjectSelector : MonoBehaviour
             counter++;
             if (counter == 1)
             {
-                Instantiate(objects[0], spawnpoint.position, Quaternion.identity, transform);
+                Instantiate(objects[0], spawnpoint.position,transform.rotation, transform);
             }
             if (counter == 2)
             {
