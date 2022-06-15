@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657863709839984531}
   m_Layer: 0
-  m_Name: Snap Offset
+  m_Name: Paint Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
