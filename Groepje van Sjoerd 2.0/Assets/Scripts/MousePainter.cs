@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class MousePainter : MonoBehaviour{
     public Camera cam;
+    public int ratingCounter;
+    private float seconds;
+    private float colorSeconds; 
     [Space]
     public bool mouseSingleClick;
     [Space]
@@ -12,7 +15,6 @@ public class MousePainter : MonoBehaviour{
     public float hardness = 1;
 
     void Update(){
-
         bool click;
         click = mouseSingleClick ? Input.GetMouseButtonDown(0) : Input.GetMouseButton(0);
 
@@ -25,12 +27,28 @@ public class MousePainter : MonoBehaviour{
                 Debug.DrawRay(ray.origin, hit.point - ray.origin, Color.red);
                 transform.position = hit.point;
                 Paintable p = hit.collider.GetComponent<Paintable>();
+
                 if(p != null){
                     PaintManager.instance.paint(p, hit.point, radius, hardness, strength, paintColor);
+                    seconds += Time.deltaTime;
+                    colorSeconds += Time.deltaTime;
+                    if (seconds >= 1f & transform.hasChanged)
+                    {
+                        seconds = 0f;
+                        transform.hasChanged = false;
+                        ratingCounter++;
+                    }
+                    if (colorSeconds >= 0.5f)
+                    {
+                        paintColor.a += 0.1f;
+                        colorSeconds = 0f;
+                    }
                 }
             }
         }
-
+          if (click == false)
+        {
+            paintColor.a = 0.5f;
+        }
     }
-
 }
