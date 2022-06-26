@@ -4,17 +4,37 @@ using UnityEngine;
 
 public class CheckIfGrabbing : MonoBehaviour
 {
-    public OVRGrabbable grabbable;
-    public void FixedUpdate()
+    //public OVRGrabbable grabbable;
+    public OVRGrabber grabber;
+
+    private void FixedUpdate()
     {
-        if (grabbable.isGrabbed == true)
+        if (grabber.grabbedObject == null)
         {
-            OVRGrabber grabber = grabbable.grabbedBy;
-            grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+            if (grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled == false)
+            {
+                grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+            }
         }
-        if (grabbable.isGrabbed == false)
+        else
         {
-            //grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+            if (grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled == true)
+            {
+                grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+            }
         }
     }
+
+    //public void FixedUpdate()
+    //{
+    //    if (grabbable.isGrabbed == true)
+    //    {
+    //        grabber = grabbable.grabbedBy;
+    //        grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+    //    }
+    //    if (grabbable.isGrabbed == false)
+    //    {
+    //        grabber.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+    //    }
+    //}
 }

@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class MoveRigidbody : MonoBehaviour
 {
+    public Spray spray;
     public GameObject target;
     public GameObject sprayGun;
     private OVRGrabbable grabbable;
+    public UnitySimpleLiquid.LiquidContainer container;
+    public bool isCap;
+    public bool isSprayCapsule;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +31,17 @@ public class MoveRigidbody : MonoBehaviour
                 gameObject.transform.position = pos;
                 gameObject.transform.rotation = new Quaternion(0,0,0,0);
 
-                gameObject.GetComponent<MeshCollider>().convex = false;
+                //gameObject.GetComponent<MeshCollider>().enabled = false;
+
+                if (isCap == true)
+                {
+                    container.IsOpen = false;
+                }
+
+                if (isSprayCapsule == true)
+                {
+                    spray.ifCapsule = true;
+                }
             }
         }
     }
@@ -37,7 +51,17 @@ public class MoveRigidbody : MonoBehaviour
         {
             if (grabbable.isGrabbed == true)
             {
-                gameObject.GetComponent<MeshCollider>().convex = true;
+                gameObject.GetComponent<MeshCollider>().enabled = true;
+
+                if (isCap == true)
+                {
+                    container.IsOpen = true;
+                }
+
+                if (isSprayCapsule == true)
+                {
+                    spray.ifCapsule = false;
+                }
             }
         }
     }
