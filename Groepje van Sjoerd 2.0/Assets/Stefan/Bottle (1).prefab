@@ -92,7 +92,8 @@ GameObject:
   - component: {fileID: 668115155622168603}
   - component: {fileID: 830108104034458677}
   - component: {fileID: 3726085435456372920}
-  m_Layer: 8
+  - component: {fileID: 3338307013892517549}
+  m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,6 +163,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3338307013892517549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943893546592596850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
+  m_Center: {x: 0, y: 0.20000102, z: 0.0063816383}
 --- !u!1 &8007036227775660584
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +191,7 @@ GameObject:
   - component: {fileID: 5499782887700030055}
   - component: {fileID: 5499782887700030074}
   - component: {fileID: 5499782887700030054}
+  - component: {fileID: 5145205847314857027}
   m_Layer: 8
   m_Name: Bottle (1)
   m_TagString: Untagged
@@ -218,7 +233,7 @@ MonoBehaviour:
   liquidMaterial: {fileID: 2100000, guid: 8dec526bbd84d684da6f40f79c3ab1bd, type: 2}
   cap: {fileID: 2711222096116865486}
   isOpen: 1
-  inertness: 50.06
+  inertness: 70
   liquidColor: {r: 0, g: 0.7300215, b: 1, a: 1}
   fillAmountPercent: 0.8
   customVolume: 0
@@ -236,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   liquidContainer: {fileID: 8635976162555969687}
   bottleneckRadius: 0.1
-  splitSpeed: 30
+  splitSpeed: 5
   maxEdgeDrops: 4
   particlesPrefab: {fileID: 5157395080114985353, guid: 6cbd7c4436dcf4a709ab46f353a9d3c3,
     type: 3}
@@ -330,6 +345,19 @@ MonoBehaviour:
     type: 3}
   m_grabPoints: []
   m_materialColorField: 
+--- !u!114 &5145205847314857027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007036227775660584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3fa6acbb983334790e9279fcc193b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 8635976162555969687}
 --- !u!1 &8138889789945388811
 GameObject:
   m_ObjectHideFlags: 0

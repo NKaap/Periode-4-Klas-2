@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1601175883211743740}
   - component: {fileID: 7815246123550276744}
   - component: {fileID: 765355747951042094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fluid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8296172667356064988}
   - component: {fileID: 1222170062}
   - component: {fileID: 1222170061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 3241803590354836021}
   - component: {fileID: 4150695810904119621}
   - component: {fileID: 773405230227982066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WhiskeyGlass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

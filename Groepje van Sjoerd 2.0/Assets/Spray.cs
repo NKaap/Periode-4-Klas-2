@@ -48,7 +48,7 @@ public class Spray : MonoBehaviour
     {
         #region particle color
         ParticleSystem.MainModule settings = particles.main;
-        settings.startColor = container.LiquidColor;
+        settings.startColor = container.LiquidColor - new Color(0,0,0,.5f);
         paintColor = container.LiquidColor;
         #endregion
 
