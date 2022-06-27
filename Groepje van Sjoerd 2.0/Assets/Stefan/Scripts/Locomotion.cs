@@ -12,16 +12,6 @@ public class Locomotion : MonoBehaviour
     public TextMeshProUGUI textMesh;
     public bool RotationBool = true;
     public bool LocomotionBool = true;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ChangeLocomotion()
     {
