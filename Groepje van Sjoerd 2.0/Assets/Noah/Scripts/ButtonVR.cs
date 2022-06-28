@@ -23,12 +23,12 @@ public class ButtonVR : MonoBehaviour
         sound = GetComponent<AudioSource>();
         isPressed = false;
     }
-    private void OnCollisionEnter(Collider collsion)
+    private void OnCollisionEnter(Collision collision)
     {
         if (!isPressed)
         {
             button.transform.localPosition = new Vector3(0, 0, 0.003f);
-            presser = collsion.gameObject;
+            presser = collision.gameObject;
             onPress.Invoke();
             //sound.Play();
             isPressed = true;
@@ -36,7 +36,7 @@ public class ButtonVR : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collider collision)
+    private void OnCollisionExit(Collision collision)
     {
         if(collision.gameObject == presser)
         {

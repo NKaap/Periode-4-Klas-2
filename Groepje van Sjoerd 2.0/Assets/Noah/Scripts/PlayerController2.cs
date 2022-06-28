@@ -19,11 +19,11 @@ public class PlayerController2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            StartCoroutine(Dieroutine());
+            StartCoroutine(SubmitScoreRoutine());
         }
     }
 
-    IEnumerator Dieroutine()
+    IEnumerator SubmitScoreRoutine()
     {
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(1f);
