@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CollisionIgnore
+  - AutoOnderdeel
   layers:
   - Default
   - TransparentFX
