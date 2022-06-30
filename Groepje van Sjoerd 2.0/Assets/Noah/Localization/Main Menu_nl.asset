@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 89825726464
-    m_Localized: Speel
+    m_Localized: SPELEN
     m_Metadata:
       m_Items: []
   - m_Id: 140551639040
@@ -40,6 +40,62 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2382281402994688
     m_Localized: HELDERHEID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8315683792736256
+    m_Localized: ACHTER BUMPER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8315896532029440
+    m_Localized: VOOR DEUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316105408368640
+    m_Localized: ACHTERKLEP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316258689208320
+    m_Localized: MOTORKAP 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316487371051008
+    m_Localized: MOTORKAP 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316619906863104
+    m_Localized: SPATBOORD 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316798240280576
+    m_Localized: SPATBORD 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316939093397504
+    m_Localized: SPIEGEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8317055237869568
+    m_Localized: ACHTER DEUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8317233776807936
+    m_Localized: BESTEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8317699768176640
+    m_Localized: 'Kleur:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8318185049149440
+    m_Localized: 'Totaal:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8318429094727680
+    m_Localized: 'Tijd:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8318607390396416
+    m_Localized: INDIENEN
     m_Metadata:
       m_Items: []
   references:

@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 89825726464
-    m_Localized: Play
+    m_Localized: START
     m_Metadata:
       m_Items: []
   - m_Id: 140551639040
@@ -40,6 +40,62 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2382281402994688
     m_Localized: BRIGHTNESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8315683792736256
+    m_Localized: REAR BUMPER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8315896532029440
+    m_Localized: FRONT DOOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316105408368640
+    m_Localized: TAILGATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316258689208320
+    m_Localized: HOOD 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316487371051008
+    m_Localized: HOOD 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316619906863104
+    m_Localized: MUDGUARD 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316798240280576
+    m_Localized: MUDGUARD 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8316939093397504
+    m_Localized: MIRROR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8317055237869568
+    m_Localized: REAR DOOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8317233776807936
+    m_Localized: ORDER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8317699768176640
+    m_Localized: 'Color:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8318185049149440
+    m_Localized: 'Total:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8318429094727680
+    m_Localized: 'Time:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8318607390396416
+    m_Localized: SUBMIT
     m_Metadata:
       m_Items: []
   references:
