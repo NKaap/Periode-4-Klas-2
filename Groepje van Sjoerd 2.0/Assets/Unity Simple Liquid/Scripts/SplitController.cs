@@ -15,7 +15,8 @@ namespace UnitySimpleLiquid
         public LiquidContainer liquidContainer;
         [SerializeField]
         private float bottleneckRadius = 0.1f;
-        public float BottleneckRadiusWorld { get; private set; }
+		//public Vector3 bottleNeckPos;
+		public float BottleneckRadiusWorld { get; private set; }
 		
         [Tooltip("How fast liquid split from container")]
         public float splitSpeed = 2f;
@@ -58,6 +59,8 @@ namespace UnitySimpleLiquid
         #region Bottleneck
         public Plane bottleneckPlane { get; private set; }
         public Plane surfacePlane { get; private set; }
+
+		//Huidige Positie van de Bottle Neck
         public Vector3 BottleneckPos { get; private set; }
 
         private Plane GenerateBottleneckPlane()
