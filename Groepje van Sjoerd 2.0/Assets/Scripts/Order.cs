@@ -11,6 +11,7 @@ public class Order : MonoBehaviour
     float msec;
     float sec;
     float min;
+    public GameObject prefab;
 
     public void StopWatchStart()
     {
@@ -43,12 +44,18 @@ public class Order : MonoBehaviour
 
     public GameObject[] orders = new GameObject[10];
     public Transform spawnPoint;
+    public bool beaultje = false;
 
     public void StartOrder()
     {
-        StopWatchReset();
-        StopWatchStart();
-        GameObject chosenOrder = orders[order];
-        Instantiate(chosenOrder, spawnPoint.position, Quaternion.identity);
+        if (beaultje == false)
+        {
+            Destroy(prefab);
+            beaultje = true;
+            StopWatchReset();
+            StopWatchStart();
+            GameObject chosenOrder = orders[order];
+            prefab = Instantiate(chosenOrder, spawnPoint.position, Quaternion.identity);
+        }
     }
 }

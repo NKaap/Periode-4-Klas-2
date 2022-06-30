@@ -10,9 +10,12 @@ public class Submit : MonoBehaviour
     public float score;
     public float time;
 
+    public Order orderScript;
+
     public void SubmitOrder()
     {
         scoreText.text = score.ToString();
         text.text = (score - time).ToString();
+        orderScript.beaultje = false;
     }
 }
