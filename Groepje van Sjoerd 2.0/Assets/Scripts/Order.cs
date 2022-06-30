@@ -6,11 +6,49 @@ using TMPro;
 public class Order : MonoBehaviour
 {
     public int order;
+    public TMP_Text timer;
+    public float time;
+    float msec;
+    float sec;
+    float min;
+
+    public void StopWatchStart()
+    {
+        StartCoroutine("StopWatch");
+    }
+    public void StopWatchStop()
+    {
+        StopCoroutine("StopWatch");
+    }
+    public void StopWatchReset()
+    {
+        time = 0;
+        timer.text = "00:00:00";
+    }
+
+    IEnumerator StopWatch()
+    {
+        while (true)
+        {
+            time += Time.deltaTime;
+            msec = (int)((time - (int)time) * 100);
+            sec = (int)(time % 60);
+            min = (int)(time / 60 % 60);
+
+            timer.text = string.Format("{0:00}:{1:00}:{2:00}", min, sec, msec);
+
+            yield return null;
+        }
+    }
 
     public GameObject[] orders = new GameObject[10];
+    public Transform spawnPoint;
 
-    private void Start()
+    public void StartOrder()
     {
-
+        StopWatchReset();
+        StopWatchStart();
+        GameObject chosenOrder = orders[order];
+        Instantiate(chosenOrder, transform.position, Quaternion.identity);
     }
 }

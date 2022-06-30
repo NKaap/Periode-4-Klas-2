@@ -16,6 +16,9 @@ public class Spray : MonoBehaviour
     public float score;
     public int multiplier;
 
+    public float seconds;
+    public Submit submit;
+
     public TMP_Text multiplierTMP;
     public TMP_Text scoreTMP;
 
@@ -44,12 +47,18 @@ public class Spray : MonoBehaviour
     //}
 
     // Update is called once per frame
+    public void PassScore()
+    {
+        submit.score = score;
+    }
+
     void FixedUpdate()
     {
         #region particle color
         ParticleSystem.MainModule settings = particles.main;
         settings.startColor = container.LiquidColor - new Color(0,0,0,.5f);
         paintColor = container.LiquidColor;
+        paintColor = paintColor - new Color(0, 0, 0, 0.5f);
         #endregion
 
         if (ifCapsule == true)
@@ -74,27 +83,31 @@ public class Spray : MonoBehaviour
                         {
                             PaintManager.instance.paint(p, hit.point, radius, hardness, strength, paintColor);
 
-                            //StartCoroutine(CheckMoving());
-
-                            //if ((currentPos - oldPos).sqrMagnitude > 0.05)
-                            //{
                             Debug.Log(grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z);
 
                             if (grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z < 0.60f && grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z > 0.20f || grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z > -0.60f && grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z < -0.20f)
-                                {
-                                    
-                                    multiplier = 2;
-                                    multiplierTMP.enabled = true;
-                                }
-                                else if (grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z > 0.60f && grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z < 0.20f || grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z < -0.60f && grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z > -0.20f)
-                                {
-                                    multiplier = 1;
-                                    multiplierTMP.enabled = false;
-                                }
+                            {
+                                multiplier = 2;
+                                multiplierTMP.enabled = true;
+                            }
+                            else if (grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z > 0.60f && grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z < 0.20f || grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z < -0.60f && grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.localRotation.z > -0.20f)
+                            {
+                                multiplier = 1;
+                                multiplierTMP.enabled = false;
+                            }
 
+                            if (grabbable.grabbedBy.transform.parent.transform.parent.gameObject.transform.hasChanged)
+                            {
                                 score += ((10 * multiplier) * 0.1f);
                                 scoreTMP.text = score.ToString();
-                            //}      
+                            }
+
+                            seconds = Time.fixedDeltaTime;
+                            if (seconds >= 0.5f)
+                            {
+                                paintColor.a += 0.1f;
+                                seconds = 0f;
+                            }
                         }
                     }
                     particles.Play();
