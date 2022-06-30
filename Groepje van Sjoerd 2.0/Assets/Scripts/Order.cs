@@ -49,6 +49,6 @@ public class Order : MonoBehaviour
         StopWatchReset();
         StopWatchStart();
         GameObject chosenOrder = orders[order];
-        Instantiate(chosenOrder, transform.position, Quaternion.identity);
+        Instantiate(chosenOrder, spawnPoint.position, Quaternion.identity);
     }
 }
