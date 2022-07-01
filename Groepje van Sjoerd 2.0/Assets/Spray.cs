@@ -33,6 +33,8 @@ public class Spray : MonoBehaviour
 
     public bool ifCapsule;
 
+    public GameObject leaderBoard;
+
     void Start()
     {
         grabbable = GetComponent<OVRGrabbable>();
@@ -100,6 +102,8 @@ public class Spray : MonoBehaviour
                             {
                                 score += ((10 * multiplier) * 0.1f);
                                 scoreTMP.text = score.ToString();
+                                leaderBoard.GetComponent<PlayerController2>().score = Mathf.RoundToInt(score);
+                                
                             }
 
                             seconds = Time.fixedDeltaTime;

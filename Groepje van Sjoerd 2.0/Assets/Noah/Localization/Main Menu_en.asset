@@ -98,5 +98,17 @@ MonoBehaviour:
     m_Localized: SUBMIT
     m_Metadata:
       m_Items: []
+  - m_Id: 8564622211141632
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8580178356195328
+    m_Localized: BACK TO THE LOBBY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8586866861789184
+    m_Localized: PaintingMachine
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

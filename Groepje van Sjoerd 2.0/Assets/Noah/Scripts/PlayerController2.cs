@@ -27,11 +27,13 @@ public class PlayerController2 : MonoBehaviour
         //Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(1f);
         yield return leaderboard.SubmitScoreRoutine(score);
+        yield return new WaitForSecondsRealtime(2f);
+        yield return leaderboard.FetchTopHighScoreRoutine();
     }
 
     public void SumbitScore()
     {
-        sprayGun.GetComponent<Spray>().score = score;
+        //sprayGun.GetComponent<Spray>().score = score;
         StartCoroutine(SubmitScoreRoutine());
     }
 }

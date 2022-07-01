@@ -95,6 +95,18 @@ MonoBehaviour:
     m_Key: SUBMIT
     m_Metadata:
       m_Items: []
+  - m_Id: 8564622211141632
+    m_Key: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8580178356195328
+    m_Key: TERUG NAAR LOBBY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8586866861789184
+    m_Key: Verfmachine
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
